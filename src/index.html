@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darshbord</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="content w-full flex">
+      <nav
+        class="nav bg-[#000000e7] p-3 flex h-[100vh] flex-col justify-between text-white"
+      >
+        <div class="profiles flex flex-col items-center">
+          <img
+            class="rounded-full w-[5rem]"
+            src="assets/img/profiles.png"
+            alt="isidore"
+          />
+          <div class="fullname">Isidore Ogoulodo</div>
+          <div class="emailAddress">isidoreogoulodo43@gmail.com</div>
+        </div>
+
+        <div class="navbar">
+          <div
+            class="cursor-pointer Home p-2 font-bold hover:border hover:bg-slate-400 hover:text-black active:bg-white active"
+          >
+            Dashboard
+          </div>
+          <div
+            class="cursor-pointer projects p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Projects
+          </div>
+          <div
+            class="cursor-pointer Cerification p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Certification
+          </div>
+          <div
+            class="cursor-pointer Skills p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Skills
+          </div>
+          <div
+            class="cursor-pointer Experience p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Experiences
+          </div>
+          <div
+            class="cursor-pointer metadata p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            metadatas
+          </div>
+          <div
+            class="cursor-pointer stepsItems p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Steps
+          </div>
+          <div
+            class="cursor-pointer blog p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Blog
+          </div>
+          <div
+            class="cursor-pointer Visitors p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Visitors
+          </div>
+          <div
+            class="cursor-pointer Performances p-2 font-bold hover:border hover:bg-slate-400 hover:text-black"
+          >
+            Performances
+          </div>
+        </div>
+        <div class="LogButton">sign-Up</div>
+      </nav>
+      <main class="main border w-[90%]">
+        <section
+          class="Dashboard home-Section h-1vh overflow-y-auto pt-6 flex flex-col items-center h-lvh w-full"
+        >
+          <div class="Activities_note w-full flex justify-around gap-4"></div>
+          <div class="dashboard-anlystics border w-[95%] mt-5">
+            <h3>Network analytics</h3>
+            <div class="home-dashboard h-[10rem] w-full visitors-analytics">
+              <div class="w-full h-[10rem]">
+                <canvas class="max-h-[10rem]" id="visitors"></canvas>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Home-content flex w-[95%] mt-[2rem] gap-x-6 flex-wrap justify-center h-[50vh]"
+          >
+            <div class="Performance-box border w-[40%]">
+              <div
+                class="box-title bg-[#1D4ED8] text-white p-2 w-full flex items-center justify-between"
+              >
+                <h3>Performance</h3>
+                <img
+                  class="w-[1rem] cursor-pointer hover:rotate-180 hover:fill-black transition-[rotate]"
+                  src="assets/img/gear.svg"
+                  alt=""
+                />
+              </div>
+              <div class="content-Performance px-4">
+                <h3>App performances</h3>
+                <div class="Seo flex justify-between items-center">
+                  <span class="font-bold w-[6rem]">SEO</span>
+                  <div
+                    class="progessBar w-[18rem] h-[1.3rem] relative bg-[#1d4fd8b4] after:w-[50%] after:h-[100%] after:absolute after:top-0 after:left-0 after:bg-orange-400"
+                  ></div>
+                  <span class="text-xl"> 50%</span>
+                </div>
+                <div class="performance flex justify-between items-center">
+                  <span class="font-bold w-[6rem]">Performance</span>
+                  <div
+                    class="progessBar w-[18rem] h-[1.3rem] relative bg-[#1d4fd8b4] after:w-[80%] after:h-[100%] after:absolute after:top-0 after:left-0 after:bg-red-400"
+                  ></div>
+                  <span class="text-xl"> 80%</span>
+                </div>
+                <div class="Accessibility flex justify-between items-center">
+                  <span class="font-bold w-[6rem]"> Accessibility</span>
+                  <div
+                    class="progessBar w-[18rem] h-[1.3rem] relative bg-[#1d4fd8b4] after:w-[90%] after:h-[100%] after:absolute after:top-0 after:left-0 after:bg-green-400"
+                  ></div>
+                  <span class="text-xl"> 90%</span>
+                </div>
+                <div class="good-pratics flex justify-between items-center">
+                  <span class="font-bold w-[6rem]"> Bonne pratique</span>
+                  <div
+                    class="progessBar w-[18rem] h-[1.3rem] relative bg-[#1d4fd8b4] after:w-[10%] after:h-[100%] after:absolute after:top-0 after:left-0 after:bg-yellow-400"
+                  ></div>
+                  <span class="text-xl"> 10%</span>
+                </div>
+              </div>
+            </div>
+            <div class="Device-box w-[40%]">
+              <div
+                class="box-title bg-[#1D4ED8] text-white p-2 w-full flex items-center justify-between"
+              >
+                <h3>Device Usage</h3>
+                <img
+                  class="w-[1rem] cursor-pointer hover:rotate-180 hover:fill-black transition-[rotate]"
+                  src="assets/img/gear.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="content-Devices flex justify-around items-center gap-2"
+              >
+                <div class="bonhut max-w-[50%]">
+                  <canvas class="max-h-[8rem]" id="Device"></d>
+                </div>
+                <div class="data-details w-[48%]">
+                  <div
+                    class="mobile flex pt-2 justify-between w-full items-center"
+                  >
+                    <div class="themes gap-1 flex">
+                      <div class="w-[1.5rem] h-[1.5rem] bg-[#FF6384]"></div>
+                      Mobile
+                    </div>
+                    <div class="percent">67%</div>
+                  </div>
+                  <div
+                    class="tablet border flex pt-2 w-full justify-between items-center"
+                  >
+                    <div class="themes gap-1 flex">
+                      <div class="w-[1.5rem] h-[1.5rem] bg-[#36A2EB]"></div>
+                      Tablet
+                    </div>
+                    <div class="percent">11%</div>
+                  </div>
+                  <div
+                    class="mobile flex pt-2 w-full justify-between items-center"
+                  >
+                    <div class="themes gap-1 flex">
+                      <div class="w-[1.5rem] h-[1.5rem] bg-[#ffcd56]"></div>
+                      Desktop
+                    </div>
+                    <div class="percent">22%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Calendar-box w-[40%]">
+              <div
+                class="box-title bg-[#1D4ED8] text-white p-2 w-full flex items-center justify-between"
+              >
+                <h3>My calendar</h3>
+                <img
+                  class="w-[1rem] cursor-pointer hover:rotate-180 hover:fill-black transition-[rotate]"
+                  src="assets/img/gear.svg"
+                  alt=""
+                />
+              </div>
+              <div class="content-calendar flex gap-4">
+                <div class="description w-[40%]">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Rem quis voluptatum delectus assumenda ea recusandae
+                  </p>
+                </div>
+                <div class="calendar w-[60%]">
+                  <div class="grid grid-cols-12">
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                    <div class="border h-[2rem] col-span-1 bg-gray-500"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Connectivity-box w-[40%]">
+              <div
+                class="box-title bg-[#1D4ED8] text-white p-2 w-full flex items-center justify-between"
+              >
+                <h3>Connectivity</h3>
+                <img
+                  class="w-[1rem] cursor-pointer hover:rotate-180 hover:fill-black transition-[rotate]"
+                  src="assets/img/gear.svg"
+                  alt=""
+                />
+              </div>
+              <div class="cartDiv w-[100%] min-h-[15rem]" id="chartdiv">
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="Projects overflow-y-auto pt-6 flex flex-col items-center h-lvh w-full"
+        >
+          <h2 class="Section-title text-2xl font-bold">Projects</h2>
+          <div
+            class="Add-buttons self-end py-4 px-8 m-6 font-bold text-white cursor-pointer border bg-[#1D4ED8]"
+          >
+            Add new projects
+          </div>
+          <div class="list-table w-[95%]">
+            <table class="border border-slate-400">
+              <thead>
+                <tr>
+                  <th class="border p-2 py-1 border-slate-400">_id</th>
+                  <th class="border p-2 py-1 border-slate-400">projectTitle</th>
+                  <th class="border p-2 py-1 border-slate-400">coverImg</th>
+
+                  <!-- <th class="border p-2 py-1 border-slate-400">descriptions</th> -->
+                  <th class="border p-2 py-1 border-slate-400">technologies</th>
+                  <!-- <th class="border p-2 py-1 border-slate-400">stack</th> -->
+                  <!-- <th class="border p-2 py-1 border-slate-400">librarys</th> -->
+                  <th class="border p-2 py-1 border-slate-400">
+                    type OF preoject
+                  </th>
+                  <!-- <th class="border p-2 py-1 border-slate-400">Authors</th> -->
+                  <th class="border p-2 py-1 border-slate-400">
+                    functionalities
+                  </th>
+                  <th class="border p-2 py-1 border-slate-400">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr>
+                  <td class="border p-2 border-slate-300">012</td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td class="border p-2 border-slate-300">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Laborum porro nam id vitae quasi ex possimus fuga labore vo
+                  </td>
+                  <td class="border p-2 border-slate-300">
+                    React typescript tailwindCss
+                  </td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td class="border p-2 border-slate-300">All Docs</td>
+                  <td
+                    class="p-2 border-slate-300 flex-col flex gap-2 items-center"
+                  >
+                    <span class="cursor-pointer"
+                      ><img src="assets/img/icon-edit.svg" alt="edit"
+                    /></span>
+                    <span class="cursor-pointer"
+                      ><img src="assets/img/eye.svg" alt="view"
+                    /></span>
+                    <span class="cursor-pointer"
+                      ><img src="assets/img/icon-delete.svg" alt="delete"
+                    /></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="Modal flex flex-col items-center m-[5rem] w-[90%] border min-h-[80vh]"
+          >
+            <h3 class="font-bold text-3xl">Project</h3>
+            <div class="edition mt-8 w-[60%]">
+              <div class="titleAndType w-[90%] flex justify-between">
+                <div class="title  flex-col flex">
+                  <label for="Title " class="font-bold ">Title</label>
+                  <input
+                    class="TitleInput w-[18rem] h-[3rem] border-4 p-2 border-black"
+                    type="txte"
+                    name="title"
+                  />
+                  <!-- <input type="text" name="" id=""> -->
+                </div>
+                <div class="title flex flex-col">
+                  <label for="Title " class="font-bold ">Type</label>
+                  <select
+                    class="w-[18rem] h-[3rem] outline-none appearance-none border-4 p-2 border-black"
+                    name="Type_of_project"
+                    id=""
+                  >
+                    <option value="Challenge">For Challenge</option>
+                    <option value="Pratice">For pratice</option>
+                    <option value="Reel_projecct">Private Project</option>
+                    <option value="personal_project">Personnal Project</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tech w-[90%]">
+                <label for="technologies">Technologies </label>
+                <div class="techs flex  w-[100%] h-[3rem] border-4 p-2 border-black">
+                  <div class="selected-techs" id="selected-techs"></div>
+                  <input
+                    class="TitleInput calendar-none border-none outline-none appearance-none"
+                    type="text"
+                    id="skill-input"
+                    list="tech"
+                    placeholder="Type to search techNo..."
+                  />
+                </div>
+
+                <datalist class="w-[100%] appearance-none" id="tech">
+                  <option value="Chocolate"></option>
+                  <option value="Coconut"></option>
+                  <option value="Mint"></option>
+                  <option value="Strawberry"></option>
+                  <option value="Vanilla"></option>
+                </datalist>
+              </div>
+              <div class="tech w-[90%]">
+                <label for="technologies">Description </label>
+                <div class="techs flex  w-[100%] border-4 p-2 border-black">
+                  <textarea
+                    class="TitleInput w-[100%] calendar-none border-none outline-none appearance-none"
+                    type="text"
+                    placeholder="Type to search techNo..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="tech w-[90%]">
+                <label for="technologies">Librairies </label>
+                <div class="techs flex  w-[100%] border-4 p-2 border-black">
+                  <input
+                    class="TitleInput w-[100%] calendar-none border-none outline-none appearance-none"
+                    type="text"
+                    placeholder="Type to search techNo..."
+                  />
+                </div>
+              </div>
+              <div class="titleAndType w-[90%] flex justify-between">
+                <div class="title  flex-col flex">
+                  <label for="Title " class="font-bold ">Url source code</label>
+                  <input
+                    class="TitleInput w-[18rem] h-[3rem] border-4 p-2 border-black"
+                    type="txte"
+                    name="source-code "
+                    placeholder="https://project.com"
+                  />
+                  <!-- <input type="text" name="" id=""> -->
+                </div>
+                <div class="title flex flex-col">
+                  <label for="Title " class="font-bold ">Author</label>
+                  <input
+                    class="w-[18rem] h-[3rem] outline-none appearance-none border-4 p-2 border-black"
+                    name="Author"
+                    id=""
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div class="titleAndType w-[90%] flex justify-between">
+                <div class="title  flex-col flex">
+                  <label for="Title " class="font-bold ">Cover image</label>
+                 <div class="coverinput   flex">
+                  <input
+                  class="TitleInput w-[10rem] h-[3rem] border-4  border-black p-2 "
+                  type="file"
+                  name="title"
+                />
+                <img  class="h-[4rem]" src="assets/img/blog.jpg" alt="">
+                 </div>
+                  <!-- <input type="text" name="" id=""> -->
+                </div>
+                <div class="title flex flex-col">
+                  <label for="Title " class="font-bold ">video demo</label>
+                  <input
+                    class="w-[18rem] h-[3rem] outline-none appearance-none border-4 p-2 border-black"
+                    name="Author"
+                    id=""
+                    type="file"
+                  />
+                </div>
+              </div>
+              <div class="titleAndType w-[90%] flex justify-between">
+                <div class="title  flex-col flex">
+                  <label for="Title " class="font-bold ">Url For preview</label>
+                  <input
+                    class="TitleInput w-[18rem] h-[3rem] border-4 p-2 border-black"
+                    type="text"
+                    name="title"
+                    placeholder="https://project.com"
+                  />
+                  <!-- <input type="text" name="" id=""> -->
+                </div>
+                <div class="title flex flex-col">
+                  <label for="Title " class="font-bold ">Contributors</label>
+                  <input
+                    class="w-[18rem] h-[3rem] outline-none appearance-none border-4 p-2 border-black"
+                    name="contributors"
+                    id=""
+                    type="text"
+                  />
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="index.ts"></script>
+  </body>
+</html>

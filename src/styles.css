@@ -1,0 +1,25 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .navbar{
+        .active{
+             @apply bg-white text-black
+        }
+    }
+    .calendar-none::-webkit-calendar-picker-indicator {
+        display: none;
+        
+
+    }
+}

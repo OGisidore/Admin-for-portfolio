@@ -1,8 +1,9 @@
 import './styles.css';
   import {  displays_activities_note } from './dashboard';
-import { Chart, ChartItem } from 'chart.js';
+// import { Chart, ChartItem } from 'chart.js';
 import { display_projects } from './projects';
-
+import VanillaCalendar from 'vanilla-calendar-pro';
+            import 'vanilla-calendar-pro/build/vanilla-calendar.min.css';
 // import am5 from "@amcharts/amcharts5/index";
 // import am5map from "@amcharts/amcharts5/map";
 // import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
@@ -17,7 +18,7 @@ import { cities } from './data';
 
 /* Imports */
 // import am5index from "@amcharts/amcharts5/index";
-import am5percent from "@amcharts/amcharts5/percent";
+// import am5percent from "@amcharts/amcharts5/percent";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
 
@@ -35,7 +36,7 @@ var chart = root.container.children.push(
       am5map.MapChart.new(root, {
         panX: "rotateX",
         panY: "none",
-        projection: am5map.geoMercator(),    
+        projection: am5map.geoOrthographic(),    
       })
     );
     // var chart = root.container.children.push(
@@ -72,16 +73,17 @@ var chart = root.container.children.push(
     
     switchButton.on("active", function () {
       if (!switchButton.get("active")) {
+        chart.set("projection", am5map.geoOrthographic());
+        chart.set("panY", "rotateY");
+        backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
+      } else {
+       
         chart.set("projection", am5map.geoMercator());
         chart.set("panY", "translateY");
         chart.set("rotationY", 0);
         // backgroundSeries
         
         backgroundSeries.mapPolygons.template.set("fillOpacity", 0);
-      } else {
-        chart.set("projection", am5map.geoOrthographic());
-        chart.set("panY", "rotateY");
-        backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
       }
     });
     
@@ -146,62 +148,65 @@ var chart = root.container.children.push(
             
             
             
-    
+            
+            
+            const calendar = new VanillaCalendar('#calendar');
+            calendar.init();
 
-let activePage : string = "Projects";
+let activePage : string = "Dashboard";
 
 // Dashboard Functions
 
-(async function(){
-  const data = [
-    { year: 2010, count: 10 },
-    { year: 2011, count: 20 },
-    { year: 2012, count: 15 },
-    { year: 2013, count: 25 },
-    { year: 2014, count: 22 },
-    { year: 2015, count: 30 },
-    { year: 2016, count: 28 },
-  ];
+  // (async function(){
+  //   const data = [
+  //     { year: 2010, count: 10 },
+  //     { year: 2011, count: 20 },
+  //     { year: 2012, count: 15 },
+  //     { year: 2013, count: 25 },
+  //     { year: 2014, count: 22 },
+  //     { year: 2015, count: 30 },
+  //     { year: 2016, count: 28 },
+  //   ];
 
-  new Chart(document.getElementById("visitors") as ChartItem, {
-    type: "line",
-    data: {
-      labels: data.map((row) => row.year),
-      datasets: [
-        {
-          label: "visitor ",
-          data: data.map((row) => row.count),
-          borderWidth: 1,
-        },
-        {
-          label: "Repos ",
-          data: [65, 59, 80, 81, 56, 55, 40],
-          borderWidth: 1,
-        },
-      ],
-    },
-  });
-})();
-(async function(){
-  new Chart(document.getElementById("Device") as ChartItem, {
-   type: 'doughnut',
-    data: {
-      datasets: [
-        {
-          label: "My First Dataset",
-          data: [300, 50, 100],
-          backgroundColor: [
-            "rgb(255, 99, 132)",
-            "rgb(54, 162, 235)",
-            "rgb(255, 205, 86)",
-          ],
-          hoverOffset: 4,
-        },
-      ],
-    },
-  });
-  
-})()
+  //   new Chart(document.getElementById("visitors") as ChartItem, {
+  //     type: "line",
+  //     data: {
+  //       labels: data.map((row) => row.year),
+  //       datasets: [
+  //         {
+  //           label: "visitor ",
+  //           data: data.map((row) => row.count),
+  //           borderWidth: 1,
+  //         },
+  //         {
+  //           label: "Repos ",
+  //           data: [65, 59, 80, 81, 56, 55, 40],
+  //           borderWidth: 1,
+  //         },
+  //       ],
+  //     },
+  //   });
+  // })();
+  // (async function(){
+  //   new Chart(document.getElementById("Device") as ChartItem, {
+  //    type: 'doughnut',
+  //     data: {
+  //       datasets: [
+  //         {
+  //           label: "My First Dataset",
+  //           data: [300, 50, 100],
+  //           backgroundColor: [
+  //             "rgb(255, 99, 132)",
+  //             "rgb(54, 162, 235)",
+  //             "rgb(255, 205, 86)",
+  //           ],
+  //           hoverOffset: 4,
+  //         },
+  //       ],
+  //     },
+  //   });
+    
+  // })()
 
 
 
@@ -215,7 +220,7 @@ displays_activities_note()
   const displays_active_page = ()=>{
     console.log("start");
     
-    navs.forEach((nav)=>{
+    navs.forEach((nav)=>{   
       nav.textContent!.trim() === activePage ? nav.classList.add("active"): nav.classList.remove("active")
     })
     console.log(activePage);

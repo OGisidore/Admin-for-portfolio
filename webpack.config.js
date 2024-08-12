@@ -6,7 +6,9 @@ module.exports = {
    mode: 'development',
   entry: {
     index :'./src/index.ts',
-    utilities : './src/utilities.ts'
+    utilities : './src/utilities.ts',
+    chart: './src/chart.ts',
+    perfor: './src/chartsperfrmana.ts'
   },
   module: {
     rules: [
